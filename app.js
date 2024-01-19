@@ -30,6 +30,12 @@ initializeApp({
   credential: admin.credential.cert(serviceAccount),
 });
 
+app.get("/test", function (req, res) {
+  res.status(200).json({
+    message: "successfully loaded",
+  });
+});
+
 app.post("/send", function (req, res) {
   const topic = "notify";
 
@@ -58,7 +64,7 @@ app.post("/send", function (req, res) {
     });
 });
 
-const port = 5000 || process.env.PORT;
+const port = process.env.PORT || 5000;
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
