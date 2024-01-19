@@ -54,15 +54,12 @@ app.get("/test", function (req, res) {
 });
 
 app.post("/send", function (req, res) {
-  const topic = "notify";
-
   const message = {
-    data: {
-      score: "850",
-      time: "2:45",
+    notification : {
+        title: "Server Live!",
+        body: "notification send from nodejs server",
     },
-
-    topic: topic,
+    topic: "notify",
   };
 
   getMessaging()
