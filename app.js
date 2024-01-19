@@ -30,6 +30,12 @@ initializeApp({
   credential: admin.credential.cert(serviceAccount),
 });
 
+app.get("/test", function (req, res) {
+  res.status(200).json({
+    message: "successfully loaded",
+  });
+});
+
 app.post("/send", function (req, res) {
   const topic = "notify";
 
