@@ -24,7 +24,7 @@ app.use(function (req, res, next) {
 initializeApp({
   credential: admin.credential.cert(serviceAccount),
 });
-console.log("error aa rhi hai yar...");
+
 app.get("/test", function (req, res) {
   res.status(200).json({
     message: "successfully loaded",
