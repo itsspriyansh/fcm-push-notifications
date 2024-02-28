@@ -10,7 +10,7 @@ const app = express();
 app.use(express.json());
 
 const corsOption = {
-  origin: ["http://localhost:3000"],
+  origin: ["http://localhost:3000", "https://main--chitranshadmin.netlify.app"],
   credentials: true,
   methods: ["GET", "POST", "PUT", "DELETE"],
 };
